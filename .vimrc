@@ -8,3 +8,14 @@ set background=dark
 "let g:solarized_termcolors=256
 let g:solarized_termtrans =1
 colorscheme solarized
+
+
+syntax on
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set ruler
+set laststatus=2
+set ignorecase
+set hlsearch
