@@ -19,3 +19,4 @@ set ruler
 set laststatus=2
 set ignorecase
 set hlsearch
+set showcmd
