@@ -1,13 +1,14 @@
 "Colors
 
-call pathogen#infect()
+"call pathogen#infect()
 set number
+set relativenumber 
 syntax enable
 set background=dark
 "Needed to get everything grey.
 "let g:solarized_termcolors=256
-let g:solarized_termtrans =1
-colorscheme solarized
+"let g:solarized_termtrans =1
+"colorscheme solarized
 
 
 syntax on
