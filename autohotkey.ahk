@@ -17,5 +17,5 @@ Capslock::Esc
 ; ^ correspons to ctrl
 ; <# corresponds to Left Windows, ># for right, # just for win
 ; Ctrl + Win + Left/Right :: Ctrl + Win + H/L
-<^<#j::<^<#Left
-<^<#k::<^<#Right
+<^<#j::^#Left
+<^<#k::^#Right
