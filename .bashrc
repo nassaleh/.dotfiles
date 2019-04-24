@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="nick"
+#ZSH_THEME="nick"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -32,20 +32,19 @@ ZSH_THEME="nick"
 plugins=(git)
 
 ######################### key bindings ###############################
-bindkey "^R" history-incremental-search-backward
-bindkey "^E" end-of-line
-bindkey "^A" beginning-of-line
-source $ZSH/oh-my-zsh.sh
+#bindkey "^R" history-incremental-search-backward
+#bindkey "^E" end-of-line
+#bindkey "^A" beginning-of-line
+#source $ZSH/oh-my-zsh.sh
 
 ######################### aliases ####################################
 #Don't alias grep until after sourcing the files above, could get bad version
 #of grep that doesn't understand --color
 alias grep='nocorrect grep --color=auto'
-alias sz='source ~/.zshrc'
+alias sz='source ~/.bashrc'
 # alias ls='ls --color=auto'
 # alias ll='ls -lh'
-alias zshconfig='vim ~/.zshrc'
-alias zc='vim ~/.zshrc'
+alias zc='vim ~/.bashrc'
 
 # Git Aliases
 alias gs='git status '
@@ -77,9 +76,5 @@ set expandtab
 set number
 #syntax on
 
-# Tetris
-autoload -U tetris
-zle -N tetris
-bindkey ^T tetris
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin
+#export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin
