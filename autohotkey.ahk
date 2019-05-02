@@ -19,3 +19,19 @@ Capslock::Esc
 ; Ctrl + Win + Left/Right :: Ctrl + Win + H/L
 <^<#j::^#Left
 <^<#k::^#Right
+
+!h:: ; The ! stands for the left alt key
+SendInput {Left}
+return
+
+!j:: ; The ! stands for the left alt key
+SendInput {Down}
+return
+
+!k:: ; The ! stands for the left alt key
+SendInput {Up}
+return
+
+!l:: ; The ! stands for the left alt key
+SendInput {Right}
+return
