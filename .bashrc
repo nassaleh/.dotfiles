@@ -64,8 +64,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
-alias uni='cd ~/Dropbox/University/'
-
+alias ytd='youtube-dl --extract-audio --audio-format mp3 '
 ######################## Indentation #################################
 set autoindent
 set smartindent
