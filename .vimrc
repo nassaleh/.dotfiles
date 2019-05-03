@@ -21,3 +21,5 @@ set laststatus=2
 set ignorecase
 set hlsearch
 set showcmd
+set splitbelow
+set splitright
