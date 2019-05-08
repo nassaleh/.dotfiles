@@ -31,6 +31,10 @@
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+shopt -s autocd #Allows you to cd into a directory merly by typing the name of the directory
+HISTSIZE= HISTFILESIZE= # Infinite History.
+HISTTIMEFORMAT="%F %T: "
+
 ######################### key bindings ###############################
 #bindkey "^R" history-incremental-search-backward
 #bindkey "^E" end-of-line
@@ -40,7 +44,7 @@ plugins=(git)
 ######################### aliases ####################################
 #Don't alias grep until after sourcing the files above, could get bad version
 #of grep that doesn't understand --color
-alias grep='nocorrect grep --color=auto'
+#alias grep='nocorrect grep --color=auto'
 alias sz='source ~/.bashrc'
 # alias ls='ls --color=auto'
 # alias ll='ls -lh'
@@ -53,8 +57,7 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
-
-alias rb='irb'
+alias gp='git pull'
 
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -62,18 +65,6 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 alias ytd='youtube-dl --extract-audio --audio-format mp3 '
-######################## Indentation #################################
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
-
-####################### General Config ###############################
-set number
-#syntax on
 
 # Customize to your needs...
 #export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin
