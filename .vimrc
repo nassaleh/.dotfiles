@@ -33,3 +33,13 @@ set runtimepath=$VIMRUNTIME     " turn off user scripts, https://github.com/igri
 syntax on               " turn syntax highlighting on by default
 filetype on             " detect type of file
 filetype indent on      " load indent file for specific file type
+
+" Un-\Ident in Normal mode with Shift\Tab
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+" Un-\Ident in Insert mode with Shift\Tab
+inoremap <Tab> <C-t>
+inoremap <S-Tab> <C-d>
+" Un-\Ident in Visual mode with Shift\Tab
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
