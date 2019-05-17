@@ -43,3 +43,13 @@ inoremap <S-Tab> <C-d>
 " Un-\Ident in Visual mode with Shift\Tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+" Normal mode remap Alt J/K to move current line up or down
+nnoremap <Esc>j :m .+1<CR>==
+nnoremap <Esc>k :m .-2<CR>==
+" Insert mode move lines up down with Alt J/k
+inoremap <Esc>j <Esc>:m .+1<CR>==gi
+inoremap <Esc>k <Esc>:m .-2<CR>==gi
+" Visual mode Alt j/k moves current line up or down
+vnoremap <Esc>j :m '>+1<CR>gv=gv
+vnoremap <Esc>k :m '<-2<CR>gv=gv
