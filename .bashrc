@@ -56,8 +56,17 @@ alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
+
 alias go='git checkout '
-alias gp='git pull'
+__git_complete go _git_checkout
+
+alias gp='git push'
+__git_complete gp _git_push
+
+alias g='git'
+__git_complete g _git
+
+alias gob='git checkout -b '
 
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -65,6 +74,11 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 alias ytd='youtube-dl --extract-audio --audio-format mp3 '
+
+#Set Tab autocomplete to cycyle htrough items
+bind "TAB:menu-complete"
+bind "set show-all-if-ambiguous on"
+
 
 # Customize to your needs...
 #export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin

@@ -38,18 +38,18 @@ filetype indent on      " load indent file for specific file type
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 " Un-\Ident in Insert mode with Shift\Tab
-inoremap <Tab> <C-t>
+"inoremap <Tab> <C-t>
 inoremap <S-Tab> <C-d>
 " Un-\Ident in Visual mode with Shift\Tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 " Normal mode remap Alt J/K to move current line up or down
-nnoremap <Esc>j :m .+1<CR>==
-nnoremap <Esc>k :m .-2<CR>==
+"nnoremap <Esc>j :m .+1<CR>==
+"nnoremap <Esc>k :m .-2<CR>==
 " Insert mode move lines up down with Alt J/k
-inoremap <Esc>j <Esc>:m .+1<CR>==gi
-inoremap <Esc>k <Esc>:m .-2<CR>==gi
+"inoremap <Esc>j <Esc>:m .+1<CR>==gi
+"inoremap <Esc>k <Esc>:m .-2<CR>==gi
 " Visual mode Alt j/k moves current line up or down
-vnoremap <Esc>j :m '>+1<CR>gv=gv
-vnoremap <Esc>k :m '<-2<CR>gv=gv
+"vnoremap <Esc>j :m '>+1<CR>gv=gv
+"vnoremap <Esc>k :m '<-2<CR>gv=gv

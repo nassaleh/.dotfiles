@@ -21,18 +21,29 @@ Capslock::Esc
 <^<#k::^#Right
 
 
-;!h:: ; The ! stands for the left alt key
-;SendInput {Left}
-;return
-;
-;!j:: ; The ! stands for the left alt key
-;SendInput {Down}
-;return
-;
-;!k:: ; The ! stands for the left alt key
-;SendInput {Up}
-;return
-;
-;!l:: ; The ! stands for the left alt key
-;SendInput {Right}
-;return
+!h:: ; The ! stands for the left alt key
+SendInput {Left}
+return
+
+!j:: ; The ! stands for the left alt key
+SendInput {Down}
+return
+
+!k:: ; The ! stands for the left alt key
+SendInput {Up}
+return
+
+!l:: ; The ! stands for the left alt key
+SendInput {Right}
+return
+
+<#`:: ; Left Win + ~ key
+    Run "C:\Program Files\Git\git-bash.exe" --cd=C:\Workspace
+    return
+
+
+;IfWinExist ahk_class gitbash
+;	winactivate ahk_class gitbash
+;else
+;	run, "C:\Program Files\Git\git-bash.exe"
+;WinWaitActive ahk_class gitbash
