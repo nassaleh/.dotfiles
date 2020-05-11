@@ -188,16 +188,17 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 
 #Custom PS1 Shell
+#TODO show date with time instead of user@host?
 PS1=""
-PS1="$PS1"'\[\e[1;32m\]'       # change to green
-PS1="$PS1"'\u@\h '             # user@host<space>
-PS1="$PS1"'\[\e[1;35m\]'       # change to purple
+PS1="$PS1"'\[\e[1;32m\]' # change to green
+PS1="$PS1"'\u@\h '       # user@host<space>
+PS1="$PS1"'\[\e[1;35m\]' # change to purple
 PS1="$PS1"'\@ '          # show time
-PS1="$PS1"'\[\e[1;33m\]'       # change to brownish yellow
-PS1="$PS1"'\w' 
-PS1="$PS1"'\[\e[1;36m\]'  # change color to cyan
+PS1="$PS1"'\[\e[1;33m\]' # change to brownish yellow
+PS1="$PS1"'\w'           # Current Directory
+PS1="$PS1"'\[\e[1;36m\]' # change color to cyan
 PS1="$PS1"'$(__git_ps1 " (%s)")'   # Git function
-PS1="$PS1"'\[\e[0m\]'        # change color
-PS1="$PS1"'\n'                 # new line
-PS1="$PS1"'$ '                 # prompt: always $
+PS1="$PS1"'\[\e[0m\]'    # change color
+PS1="$PS1"'\n'           # new line
+PS1="$PS1"'$ '           # prompt: always $
 

@@ -1,7 +1,21 @@
-syntax on
+"""""""""""""""""""""""""""""""""""""""""""""
+"                                           "
+"   ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗ "
+"   ██║   ██║██║████╗ ████║██╔══██╗██╔════╝ "
+"   ██║   ██║██║██╔████╔██║██████╔╝██║      "
+"   ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║      "
+" ██╗╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗ "
+" ╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ "
+"                                           "
+"""""""""""""""""""""""""""""""""""""""""""""
+
+"set runtimepath+=~/.vim/colors
+
+set background=dark     " Set background before Syntax and colorscheme
+syntax on               " turn syntax highlighting on by default
+"colorscheme aurora " set color scheme to aurora
 
 set relativenumber 
-set background=dark
 
 set smartindent
 set tabstop=4
@@ -28,9 +42,8 @@ set visualbell t_vb=    " turn off error beep/flash
 set novisualbell        " turn off visual bell
 
 set backspace=indent,eol,start  " make that backspace key work the way it should
-set runtimepath=$VIMRUNTIME     " turn off user scripts, https://github.com/igrigorik/vimgolf/issues/129
+"set runtimepath=$VIMRUNTIME     " turn off user scripts, https://github.com/igrigorik/vimgolf/issues/129
 
-syntax on               " turn syntax highlighting on by default
 filetype on             " detect type of file
 filetype indent on      " load indent file for specific file type
 
@@ -53,3 +66,4 @@ vnoremap <S-Tab> <gv
 " Visual mode Alt j/k moves current line up or down
 "vnoremap <Esc>j :m '>+1<CR>gv=gv
 "vnoremap <Esc>k :m '<-2<CR>gv=gv
+
