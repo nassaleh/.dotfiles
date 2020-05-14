@@ -13,6 +13,7 @@
 
 set background=dark     " Set background before Syntax and colorscheme
 syntax on               " turn syntax highlighting on by default
+set termguicolors       " Enables better colors in WSL
 "colorscheme aurora " set color scheme to aurora
 
 set relativenumber 

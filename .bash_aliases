@@ -6,6 +6,7 @@ alias sz='source ~/.bashrc'
 # alias ls='ls --color=auto'
 # alias ll='ls -lh'
 alias zc='vim ~/.bashrc'
+alias vc='vim ~/.vimrc'
 
 # Git Aliases
 alias gs='git status '

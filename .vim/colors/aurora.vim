@@ -63,6 +63,10 @@ let s:lightaqua    = "#a3fff3"
 let s:lightblue    = "#ade3ff"
 let s:lightpurple  = "#d8d1ff"
 
+" This is only necessary if you use 'set termguicolors'.
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 let s:none = "NONE"
 
 " ----------------------------------------------------------------------------
