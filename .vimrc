@@ -14,7 +14,7 @@
 set background=dark     " Set background before Syntax and colorscheme
 syntax on               " turn syntax highlighting on by default
 set termguicolors       " Enables better colors in WSL
-"colorscheme aurora " set color scheme to aurora
+colorscheme aurora " set color scheme to aurora
 
 set relativenumber 
 
@@ -39,8 +39,11 @@ set showmatch           " jump to matches when entering regexp
 set ignorecase          " ignore case when searching
 set smartcase           " no ignorecase if Uppercase char present
 
-set visualbell t_vb=    " turn off error beep/flash
-set novisualbell        " turn off visual bell
+"set visualbell t_vb=    " turn off error beep/flash
+set visualbell
+"set novisualbell        " turn off visual bell
+
+set history=200         " Increase command history
 
 set backspace=indent,eol,start  " make that backspace key work the way it should
 "set runtimepath=$VIMRUNTIME     " turn off user scripts, https://github.com/igrigorik/vimgolf/issues/129
@@ -58,13 +61,18 @@ inoremap <S-Tab> <C-d>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Normal mode remap Alt J/K to move current line up or down
-"nnoremap <Esc>j :m .+1<CR>==
-"nnoremap <Esc>k :m .-2<CR>==
-" Insert mode move lines up down with Alt J/k
-"inoremap <Esc>j <Esc>:m .+1<CR>==gi
-"inoremap <Esc>k <Esc>:m .-2<CR>==gi
-" Visual mode Alt j/k moves current line up or down
-"vnoremap <Esc>j :m '>+1<CR>gv=gv
-"vnoremap <Esc>k :m '<-2<CR>gv=gv
+" Leader Key Remapping
+set timeoutlen=1000
+nnoremap <Space> <Nop>
+"map <Space> <leader>
+let mapleader = "\<Space>"
+"let localleader = "\<Space>"
 
+"Move line with Alt
+"nnoremap <leader>j :m .+1<CR>==
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
