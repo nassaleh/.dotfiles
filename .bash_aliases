@@ -15,6 +15,10 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 
+# some ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # setup autocompletion
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
