@@ -56,7 +56,6 @@ HISTTIMEFORMAT="%F %T: "
 bind "TAB:menu-complete"
 bind "set show-all-if-ambiguous on"
 
-
 # Customize to your needs...
 #export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin
 
@@ -219,7 +218,6 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-
 
 #Custom PS1 Shell
 #TODO show date with time instead of user@host?
