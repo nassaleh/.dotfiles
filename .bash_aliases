@@ -9,7 +9,7 @@ alias zc='vim ~/.bashrc'
 alias vc='vim ~/.vimrc'
 
 # Directory
-alias ww ='cd /mnt/c/Workspace/'
+alias ww='cd /mnt/c/Workspace/'
 
 # Git Aliases
 alias gs='git status '

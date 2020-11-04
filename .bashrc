@@ -52,6 +52,8 @@ HISTTIMEFORMAT="%F %T: "
 #bindkey "^A" beginning-of-line
 #source $ZSH/oh-my-zsh.sh
 
+bind '"\C-H":backward-kill-word' # Makes Ctrl+Backspace work on windows Terminal
+
 #Set Tab autocomplete to cycyle htrough items
 bind "TAB:menu-complete"
 bind "set show-all-if-ambiguous on"
