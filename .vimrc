@@ -51,12 +51,18 @@ set backspace=indent,eol,start  " make that backspace key work the way it should
 filetype on             " detect type of file
 filetype indent on      " load indent file for specific file type
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"                     Remap                      "
+""""""""""""""""""""""""""""""""""""""""""""""""""  
+
 " Un-\Ident in Normal mode with Shift\Tab
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
+
 " Un-\Ident in Insert mode with Shift\Tab
 "inoremap <Tab> <C-t>
 inoremap <S-Tab> <C-d>
+
 " Un-\Ident in Visual mode with Shift\Tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
@@ -68,6 +74,9 @@ nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 "let localleader = "\<Space>"
 
+" Clear highlight on pressing ESC
+nnoremap <Leader><esc> :noh<cr>
+
 "Move line with Alt
 "nnoremap <leader>j :m .+1<CR>==
 nnoremap <A-j> :m .+1<CR>==
@@ -76,3 +85,4 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+

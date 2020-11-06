@@ -19,9 +19,14 @@ alias gc='git commit'
 alias gd='git diff'
 
 # some ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alFh'
+alias la='ls -Ah'
+alias l='ls -CFh'
+alias ls='ls --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # setup autocompletion
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
