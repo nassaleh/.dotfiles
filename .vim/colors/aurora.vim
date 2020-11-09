@@ -21,6 +21,7 @@ highlight! clear
 syntax reset
 
 let g:colors_name = "aurora"
+set cursorline
 set background=dark
 
 " ----------------------------------------------------------------------------
@@ -137,7 +138,7 @@ call s:HL('SignColumn', s:none, s:none, s:none)
 " call s:HL('Incsearch', s:none, s:none, s:none)
 
 call s:HL('LineNr', s:orange, s:none, s:none)
-call s:HL('CursorLineNr', s:yellow, s:none, s:none)
+call s:HL('CursorLineNr', s:blue, s:none, s:none)
 call s:HL('MatchParen', s:accent_2, s:purple, s:none)
 call s:HL('ModeMsg', s:green, s:none, s:none)
 call s:HL('MoreMsg', s:green, s:none, s:none)
