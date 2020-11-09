@@ -136,7 +136,7 @@ call s:HL('FoldColumn', s:accent_5, s:none, s:none)
 call s:HL('SignColumn', s:none, s:none, s:none)
 " call s:HL('Incsearch', s:none, s:none, s:none)
 
-call s:HL('LineNr', s:accent_4, s:none, s:none)
+call s:HL('LineNr', s:orange, s:none, s:none)
 call s:HL('CursorLineNr', s:yellow, s:none, s:none)
 call s:HL('MatchParen', s:accent_2, s:purple, s:none)
 call s:HL('ModeMsg', s:green, s:none, s:none)
