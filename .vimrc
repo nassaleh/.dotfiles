@@ -14,10 +14,11 @@
 set background=dark     " Set background before Syntax and colorscheme
 syntax on               " turn syntax highlighting on by default
 set termguicolors       " Enables better colors in WSL
-colorscheme aurora " set color scheme to aurora
+colorscheme aurora      " set color scheme to aurora
 
-set relativenumber 
-
+set relativenumber      " Sets relative line numbers 
+set cursorline          " Highlights the current cursor line
+set noerrorbells
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -25,6 +26,8 @@ set expandtab
 set laststatus=2
 set splitbelow          " splits below by default
 set splitright          " splits on right by default
+set noswapfile          " No swap files when editing in vim
+set smartcase           "Case insensitive search until you put a capital letter
 
 set backspace=indent,eol,start " make that backspace key work the way it should
 
@@ -40,7 +43,7 @@ set ignorecase          " ignore case when searching
 set smartcase           " no ignorecase if Uppercase char present
 
 "set visualbell t_vb=    " turn off error beep/flash
-set visualbell
+"set visualbell
 "set novisualbell        " turn off visual bell
 
 set history=200         " Increase command history
@@ -86,3 +89,9 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+""""""""""""""""""""""""""""""""""""""""
+" Plugins "
+execute pathogen#infect()
+
+"Airline Theme
+let g:airline_theme='base16_spacemacs'
