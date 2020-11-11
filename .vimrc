@@ -28,6 +28,7 @@ set splitbelow          " splits below by default
 set splitright          " splits on right by default
 set noswapfile          " No swap files when editing in vim
 set smartcase           "Case insensitive search until you put a capital letter
+set wildmode=longest,list,full " Enable Autocompletion 
 
 set backspace=indent,eol,start " make that backspace key work the way it should
 
@@ -42,6 +43,8 @@ set showmatch           " jump to matches when entering regexp
 set ignorecase          " ignore case when searching
 set smartcase           " no ignorecase if Uppercase char present
 
+set splitbelow splitright " Splits open at bottm and right
+
 "set visualbell t_vb=    " turn off error beep/flash
 "set visualbell
 "set novisualbell        " turn off visual bell
@@ -54,9 +57,9 @@ set backspace=indent,eol,start  " make that backspace key work the way it should
 filetype on             " detect type of file
 filetype indent on      " load indent file for specific file type
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-"                     Remap                      "
-""""""""""""""""""""""""""""""""""""""""""""""""""  
+"-----------------------------------
+" Remap 
+"-----------------------------------
 
 " Un-\Ident in Normal mode with Shift\Tab
 nnoremap <Tab> >>
@@ -89,8 +92,7 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-""""""""""""""""""""""""""""""""""""""""
-" Plugins "
+"---------Plugins---------"
 execute pathogen#infect()
 
 "Airline Theme
