@@ -43,6 +43,7 @@
 plugins=(git)
 
 shopt -s autocd #Allows you to cd into a directory merly by typing the name of the directory
+
 HISTSIZE= HISTFILESIZE= # Infinite History.
 HISTTIMEFORMAT="%F %T: "
 
@@ -54,9 +55,11 @@ HISTTIMEFORMAT="%F %T: "
 
 bind '"\C-H":backward-kill-word' # Makes Ctrl+Backspace work on windows Terminal
 
-#Set Tab autocomplete to cycyle htrough items
+#Set Tab autocomplete to cycyle through items
 bind "TAB:menu-complete"
-bind "set show-all-if-ambiguous on"
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set completion-map-case on
 
 # Customize to your needs...
 #export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin
@@ -193,8 +196,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-set completion-ignore-case on
 
 # Git prompt options
 export GIT_PS1_SHOWCOLORHINTS=1

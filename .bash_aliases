@@ -11,6 +11,10 @@ alias vc='vim ~/.vimrc'
 # Directory
 alias ww='cd /mnt/c/Workspace/'
 
+# Force Confirmation before Moving/Deleting
+alias mv='mv -i'
+alias rm='rm -i'
+
 # Git Aliases
 alias gs='git status '
 alias ga='git add '
@@ -28,7 +32,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# setup autocompletion
+# Setup Autocompletion
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
   source /usr/share/bash-completion/completions/git
   __git_complete gc _git_checkout
