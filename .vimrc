@@ -92,6 +92,20 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+"Move windows with ease
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
+
+"Resize Vertical Splits
+nnoremap <Leader>, <C-w><
+nnoremap <Leader>. <C-w>>
+
+"Resize Horizontal Splits
+nnoremap - <C-W>-
+nnoremap = <C-W>+
+
 "---------Plugins---------"
 execute pathogen#infect()
 
