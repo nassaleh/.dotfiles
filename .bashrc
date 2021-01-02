@@ -225,3 +225,8 @@ PS1="$PS1"'\[\e[0m\]'    # change color
 PS1="$PS1"'\n'           # new line
 PS1="$PS1"'$ '           # prompt: always $
 
+# Mount Windows Drives in WSL
+#sudo mkdir /mnt/z
+#sudo mount -t drvfs 'Z:' /mnt/z
+
+a
