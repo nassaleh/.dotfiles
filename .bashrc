@@ -228,5 +228,3 @@ PS1="$PS1"'$ '           # prompt: always $
 # Mount Windows Drives in WSL
 #sudo mkdir /mnt/z
 #sudo mount -t drvfs 'Z:' /mnt/z
-
-a
