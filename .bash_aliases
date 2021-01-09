@@ -56,3 +56,24 @@ alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 alias ytd='youtube-dl --extract-audio --audio-format mp3 '
 
+alias mm='mount_all_network_drives'
+
+# Goes through the list of drives and mounts the corresponding drive to the folder name
+function mount_all_network_drives(){
+    declare -A drives=(
+        [W]="Mass_Storage"
+        [T]="Torrents"
+        [U]="Photo"
+        [V]="Video"
+    )
+
+    for key in "${!drives[@]}"; do
+        value="${drives[$key]}"
+        #echo "sudo mount -t drvfs '$key:' /mnt/$value/" 
+        if sudo mount -t drvfs "$key:" /mnt/$value/ ; then 
+            echo  "Mounted $value ($key:)"
+        else
+            echo "Error Mounting $value ($key:)"
+        fi
+    done    
+}

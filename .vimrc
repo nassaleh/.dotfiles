@@ -103,8 +103,12 @@ nnoremap <Leader>, <C-w><
 nnoremap <Leader>. <C-w>>
 
 "Resize Horizontal Splits
-nnoremap - <C-W>-
-nnoremap = <C-W>+
+"nnoremap - <C-W>-
+"nnoremap = <C-W>+
+
+"Resize Vertical Splits
+"nnoremap _ <C-W><
+"nnoremap + <C-W>>
 
 "---------Plugins---------"
 execute pathogen#infect()
