@@ -228,3 +228,5 @@ PS1="$PS1"'$ '           # prompt: always $
 # Mount Windows Drives in WSL
 #sudo mkdir /mnt/z
 #sudo mount -t drvfs 'Z:' /mnt/z
+#TODO Use this to sync, maybe make a command out of it? 'backup'? How to deal with dry run...
+#sudo rsync --exclude-from='exclude-list.txt' -avzP . /mnt/e

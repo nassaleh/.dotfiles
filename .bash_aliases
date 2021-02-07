@@ -49,6 +49,7 @@ alias gp='git push'
 alias g='git'
 alias gob='git checkout -b '
 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
