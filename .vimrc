@@ -46,7 +46,7 @@ set smartcase           " no ignorecase if Uppercase char present
 set splitbelow splitright " Splits open at bottm and right
 
 "set visualbell t_vb=    " turn off error beep/flash
-"set visualbell
+set visualbell
 "set novisualbell        " turn off visual bell
 
 set history=200         " Increase command history
@@ -82,6 +82,7 @@ let mapleader = "\<Space>"
 
 " Clear highlight on pressing ESC
 nnoremap <Leader><esc> :noh<cr>
+nnoremap <esc> :noh<return><esc>
 
 "Move line with Alt
 "nnoremap <leader>j :m .+1<CR>==

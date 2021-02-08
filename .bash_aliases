@@ -60,16 +60,18 @@ alias ytd='youtube-dl --extract-audio --audio-format mp3 '
 alias mm='mount_all_network_drives'
 alias um='unmount_all_network_drives'
 
+# Declare Drives dictionary and export it so it can be used in all functions
+declare -A drives=(
+    [W]="Mass_Storage"
+    [T]="Torrents"
+    [U]="Photo"
+    [V]="Video"
+    [K]="Kamil"
+) 
+export drives
+
 # Goes through the list of drives and mounts the corresponding drive to the folder name
 function mount_all_network_drives(){ 
-    declare -A drives=(
-        [W]="Mass_Storage"
-        [T]="Torrents"
-        [U]="Photo"
-        [V]="Video"
-        [K]="Kamil"
-    )
-
     for key in "${!drives[@]}"; do
         value="${drives[$key]}"
         #echo "sudo mount -t drvfs '$key:' /mnt/$value/" 
@@ -83,14 +85,6 @@ function mount_all_network_drives(){
 
 # Goes through the list of drives and unmounts the corresponding drive
 function unmount_all_network_drives(){ 
-    declare -A drives=(
-        [W]="Mass_Storage"
-        [T]="Torrents"
-        [U]="Photo"
-        [V]="Video"
-        [K]="Kamil"
-    )
-
     for key in "${!drives[@]}"; do
         value="${drives[$key]}"
         #echo "sudo mount -t drvfs '$key:' /mnt/$value/" 
@@ -100,4 +94,16 @@ function unmount_all_network_drives(){
             echo "Error Unmounting $value ($key:)"
         fi
     done    
+}
+
+function backup(){
+    cmd="sudo rsync -exclude-from='exclude-list.txt' -avzP . $1"
+    echo $cmd
+    eval $cmd
+}
+
+function backup-test(){
+    cmd="sudo rsync -exclude-from='exclude-list.txt' -navzP . $1"
+    echo $cmd
+    eval $cmd
 }
