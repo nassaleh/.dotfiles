@@ -82,7 +82,7 @@ let mapleader = "\<Space>"
 
 " Clear highlight on pressing ESC
 nnoremap <Leader><esc> :noh<cr>
-nnoremap <esc> :noh<return><esc>
+"nnoremap <esc> :noh<return><esc>
 
 "Move line with Alt
 "nnoremap <leader>j :m .+1<CR>==

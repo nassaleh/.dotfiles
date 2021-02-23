@@ -214,7 +214,9 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 #TODO show date with time instead of user@host?
 PS1=""
 PS1="$PS1"'\[\e[1;32m\]' # change to green
-PS1="$PS1"'\u@\h '       # user@host<space>
+PS1="$PS1"'\u '          # user
+PS1="$PS1"'\[\e[1;34m\]' # change to Blue
+PS1="$PS1"'\D{%F} '      # show Date
 PS1="$PS1"'\[\e[1;35m\]' # change to purple
 PS1="$PS1"'\@ '          # show time
 PS1="$PS1"'\[\e[1;33m\]' # change to brownish yellow
@@ -230,3 +232,7 @@ PS1="$PS1"'$ '           # prompt: always $
 #sudo mount -t drvfs 'Z:' /mnt/z
 #TODO Use this to sync, maybe make a command out of it? 'backup'? How to deal with dry run...
 #sudo rsync --exclude-from='exclude-list.txt' -avzP . /mnt/e
+
+bind 'set bell-style visual'
+
+
