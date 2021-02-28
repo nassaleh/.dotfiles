@@ -172,6 +172,8 @@ source_files () {
         ".bash_aliases"
     )
 
+    #echo "In source_files"
+
     # Iterate through each file and source them
     for i in "${filesToSource[@]}"
     do
@@ -184,6 +186,7 @@ source_files () {
         fi
     done
 }
+
 source_files
 
 # enable programmable completion features (you don't need to enable
@@ -235,4 +238,51 @@ PS1="$PS1"'$ '           # prompt: always $
 
 bind 'set bell-style visual'
 
+############### Functions ##############
+# Declare Drives dictionary and export it so it can be used in all functions
+declare -A drives=(
+    [W]="Mass_Storage"
+    [T]="Torrents"
+    [U]="Photo"
+    [V]="Video"
+    [K]="Kamil"
+) 
+export drives
 
+# Goes through the list of drives and mounts the corresponding drive to the folder name
+function mount_all_network_drives(){ 
+    for key in "${!drives[@]}"; do
+        value="${drives[$key]}"
+        #echo "sudo mount -t drvfs '$key:' /mnt/$value/" 
+        if sudo mount -t drvfs "$key:" /mnt/$value/ ; then 
+            echo  "Mounted $value ($key:)"
+        else
+            echo "Error Mounting $value ($key:)"
+        fi
+    done    
+}
+
+# Goes through the list of drives and unmounts the corresponding drive
+function unmount_all_network_drives(){ 
+    for key in "${!drives[@]}"; do
+        value="${drives[$key]}"
+        #echo "sudo mount -t drvfs '$key:' /mnt/$value/" 
+        if sudo umount /mnt/$value/ ; then 
+            echo  "Unmounted $value ($key:)"
+        else
+            echo "Error Unmounting $value ($key:)"
+        fi
+    done    
+}
+
+function backup(){
+    cmd="sudo rsync -exclude-from='exclude-list.txt' -avzP . $1"
+    echo $cmd
+    eval $cmd
+}
+
+function backup-test(){
+    cmd="sudo rsync -exclude-from='exclude-list.txt' -navzP . $1"
+    echo $cmd
+    eval $cmd
+}
