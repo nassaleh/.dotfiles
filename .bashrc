@@ -276,13 +276,33 @@ function unmount_all_network_drives(){
 }
 
 function backup(){
-    cmd="sudo rsync -exclude-from='exclude-list.txt' -avzP . $1"
+    create-manifest
+    cmd="sudo rsync --exclude-from='exclude-list.txt' -avzhhP --stats . $1"
     echo $cmd
     eval $cmd
 }
 
 function backup-test(){
-    cmd="sudo rsync -exclude-from='exclude-list.txt' -navzP . $1"
+    create-manifest
+    cmd="sudo rsync --exclude-from='exclude-list.txt' -navzhP --stats . $1"
     echo $cmd
     eval $cmd
+}
+
+function create-manifest(){
+    zipFile="manifest.zip"
+    file=manifest-"`date -I`".txt
+    tree > $file
+
+    echo "Creating $file"
+    if test -f "$zipFile";
+    then
+        echo "Updating $zipFile"
+        zip -ur $zipFile $file
+    else
+        echo "Creating $zipFile"
+        zip -r $zipFile $file
+    fi
+
+    rm -f $file
 }
