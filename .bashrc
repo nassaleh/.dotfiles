@@ -242,7 +242,7 @@ bind 'set bell-style visual'
 # Declare Drives dictionary and export it so it can be used in all functions
 declare -A drives=(
     [W]="Mass_Storage"
-    [T]="Torrents"
+#    [T]="Torrents"
     [U]="Photo"
     [V]="Video"
     [K]="Kamil"
@@ -290,9 +290,10 @@ function backup-test(){
 }
 
 function create-manifest(){
+    #tree -aflix
     zipFile="manifest.zip"
     file=manifest-"`date -I`".txt
-    tree > $file
+    tree -aflix > $file
 
     echo "Creating $file"
     if test -f "$zipFile";
