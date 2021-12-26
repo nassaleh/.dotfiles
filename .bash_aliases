@@ -60,3 +60,5 @@ alias ytd='youtube-dl --extract-audio --audio-format mp3 '
 alias mm='mount_all_network_drives'
 alias um='unmount_all_network_drives'
 
+alias open='explorer.exe .' # Opens a windows folder in WSL
+alias bb='ssh debian@192.168.1.111' # SSH into beaglebone

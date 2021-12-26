@@ -64,6 +64,9 @@ set completion-map-case on
 # Customize to your needs...
 #export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin
 
+if [ -d "$HOME/bin" ] ; then
+  PATH="$PATH:$HOME/.local/bin"
+fi
 ##########################
 # Bashrc from ubuntu WSL #
 ##########################
@@ -275,6 +278,10 @@ function unmount_all_network_drives(){
     done    
 }
 
+# Example to mount:
+# sudo mount -t drvfs d: /mnt/d
+# Then navigate to your source you want to backup (Example NAS)
+# Example command: backup /mnt/d/Mass_Storage
 function backup(){
     create-manifest
     cmd="sudo rsync --exclude-from='exclude-list.txt' -avzhhP --stats . $1"
@@ -293,9 +300,16 @@ function create-manifest(){
     #tree -aflix
     zipFile="manifest.zip"
     file=manifest-"`date -I`".txt
-    tree -aflix > $file
+    
+    if unzip -l $zipFile | grep -q "$file" ; then
+        echo "WARN: $file exists. Skipping manifest generation."
+        return 1;
+    fi
 
     echo "Creating $file"
+
+    tree -aflix > $file
+
     if test -f "$zipFile";
     then
         echo "Updating $zipFile"
