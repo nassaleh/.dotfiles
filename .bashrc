@@ -283,14 +283,14 @@ function unmount_all_network_drives(){
 # Then navigate to your source you want to backup (Example NAS)
 # Example command: backup /mnt/d/Mass_Storage
 function backup(){
-    create-manifest
+#    create-manifest
     cmd="sudo rsync --exclude-from='exclude-list.txt' -avzhhP --stats . $1"
     echo $cmd
     eval $cmd
 }
 
 function backup-test(){
-    create-manifest
+    #create-manifest
     cmd="sudo rsync --exclude-from='exclude-list.txt' -navzhP --stats . $1"
     echo $cmd
     eval $cmd

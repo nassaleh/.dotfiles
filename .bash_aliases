@@ -23,10 +23,10 @@ alias gc='git commit'
 alias gd='git diff'
 
 # some ls aliases
-alias ll='ls -alFh'
+alias ll='ls -AlFh --time-style=long-iso --color=auto'
 alias la='ls -Ah'
 alias l='ls -CFh'
-alias ls='ls --color=auto'
+alias ls='ls -A --time-style=long-iso --color=auto'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -62,3 +62,4 @@ alias um='unmount_all_network_drives'
 
 alias open='explorer.exe .' # Opens a windows folder in WSL
 alias bb='ssh debian@192.168.1.111' # SSH into beaglebone
+alias pi='ssh pi@192.168.1.11' # SSH into Raspberry pi
