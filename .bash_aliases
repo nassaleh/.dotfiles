@@ -26,7 +26,7 @@ alias gd='git diff'
 alias ll='ls -AlFh --time-style=long-iso --color=auto'
 alias la='ls -Ah'
 alias l='ls -CFh'
-alias ls='ls -A --time-style=long-iso --color=auto'
+alias ls='ls --time-style=long-iso --color=auto'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

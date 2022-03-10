@@ -47,6 +47,9 @@ shopt -s autocd #Allows you to cd into a directory merly by typing the name of t
 HISTSIZE= HISTFILESIZE= # Infinite History.
 HISTTIMEFORMAT="%F %T: "
 
+# Dont add duplicate lines or lines beginning with a space
+HISTCONTROL=ignoreboth
+
 ######################### key bindings ###############################
 #bindkey "^R" history-incremental-search-backward
 #bindkey "^E" end-of-line
