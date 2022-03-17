@@ -111,6 +111,9 @@ nnoremap <Leader>. <C-w>>
 "nnoremap _ <C-W><
 "nnoremap + <C-W>>
 
+"Run `DiffOrig` As a command to see changes to a file that has not been saved.
+"Creates a new vertical split, creates a scratch file, does some other magic
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 "---------Plugins---------"
 execute pathogen#infect()
 
