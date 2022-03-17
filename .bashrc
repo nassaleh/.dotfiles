@@ -18,9 +18,9 @@
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="nick"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Set vim as the default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -56,10 +56,10 @@ HISTCONTROL=ignoreboth
 #bindkey "^A" beginning-of-line
 #source $ZSH/oh-my-zsh.sh
 
-bind '"\C-H":backward-kill-word' # Makes Ctrl+Backspace work on windows Terminal
+#bind '"\C-H":backward-kill-word' # Makes Ctrl+Backspace work on windows Terminal
 
 #Set Tab autocomplete to cycyle through items
-bind "TAB:menu-complete"
+#bind "TAB:menu-complete"
 set show-all-if-ambiguous on
 set completion-ignore-case on
 set completion-map-case on
@@ -247,7 +247,7 @@ PS1="$PS1"'$ '                  # Prompt: always $
 #TODO Use this to sync, maybe make a command out of it? 'backup'? How to deal with dry run...
 #sudo rsync --exclude-from='exclude-list.txt' -avzP . /mnt/e
 
-bind 'set bell-style visual'
+#bind 'set bell-style visual'
 
 ############### Functions ##############
 # Declare Drives dictionary and export it so it can be used in all functions
@@ -328,4 +328,10 @@ function create-manifest(){
     fi
 
     rm -f $file
+}
+
+function download(){
+    echo $1
+    echo $2
+    yt-dlp -o "%(playlist)s/ - %(title)s.%(ext)s" --yes-playlist --download-archive $1.ignore --simulate --extract-audio --audio-format best --audio-quality best --no-keep-video $2
 }
