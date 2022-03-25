@@ -61,5 +61,7 @@ alias mm='mount_all_network_drives'
 alias um='unmount_all_network_drives'
 
 alias open='explorer.exe .' # Opens a windows folder in WSL
-alias bb='ssh debian@192.168.1.111' # SSH into beaglebone
-alias pi='ssh pi@192.168.1.11' # SSH into Raspberry pi
+alias bb='ssh bb' # SSH into beaglebone
+alias pi='ssh pi' # SSH into Raspberry pi
+
+alias rsc='"/mnt/c/Program Files (x86)/General Electric/RSDetectionConfigurationUtility/./RSDetection.exe" "/internal"'
