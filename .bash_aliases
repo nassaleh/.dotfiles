@@ -3,9 +3,8 @@
 #of grep that doesn't understand --color
 #alias grep='nocorrect grep --color=auto'
 alias sz='source ~/.bashrc'
-# alias ls='ls --color=auto'
-# alias ll='ls -lh'
 alias zc='vim ~/.bashrc'
+alias za='vim ~/.dotfiles/.bash_aliases'
 alias vc='vim ~/.vimrc'
 
 # Directory
@@ -34,7 +33,7 @@ alias egrep='egrep --color=auto'
 
 # Setup Autocompletion
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
-  source /usr/share/bash-completion/completions/git
+      source /usr/share/bash-completion/completions/git
   __git_complete gc _git_checkout
   __git_complete gp _git_pull
   __git_complete go _git_checkout
@@ -44,11 +43,13 @@ else
   echo "Error loading git completions"
 fi
 
+# Git
 alias go='git checkout '
 alias gp='git push'
 alias g='git'
 alias gob='git checkout -b '
 
+# Bash Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -57,6 +58,12 @@ alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 alias ytd='youtube-dl --extract-audio --audio-format mp3 '
 
+# Tmux
+alias tm='tmux'
+alias ta='tmux a'
+alias tt='vim ~/.dotfiles/tmux/tmux.conf'
+
+# Random
 alias mm='mount_all_network_drives'
 alias um='unmount_all_network_drives'
 

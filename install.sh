@@ -6,6 +6,7 @@ DIR=$PWD
 ln -sf $DIR/.vimrc ~/.vimrc
 ln -sf $DIR/.bashrc ~/.bashrc
 ln -sf $DIR/.vim ~/.vim
+ln -sf $DIR/tmux/tmux.conf ~/.tmux.conf
 #ln -sf $DIR/dircolors-solarized ~/dircolors-solarized
 #ln -sf $DIR/mc-solarized.ini ~/mc-solarized.ini
 
