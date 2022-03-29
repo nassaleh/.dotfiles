@@ -256,7 +256,7 @@ PS1="$PS1"'$ '                  # Prompt: always $
 #TODO Use this to sync, maybe make a command out of it? 'backup'? How to deal with dry run...
 #sudo rsync --exclude-from='exclude-list.txt' -avzP . /mnt/e
 
-bind 'set bell-style visual'
+set bell-style visible
 
 ############### Functions ##############
 # Declare Drives dictionary and export it so it can be used in all functions
