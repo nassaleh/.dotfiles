@@ -60,11 +60,8 @@ bind '"\C-H":backward-kill-word' # Makes Ctrl+Backspace work on windows Terminal
 
 #Set Tab autocomplete to cycyle through items
 bind "TAB:menu-complete"
-<<<<<<< Updated upstream
-=======
 
 # Display a list of the matching files
->>>>>>> Stashed changes
 set show-all-if-ambiguous on
 
 # Perform partial (common) completion on the first Tab press, only start
