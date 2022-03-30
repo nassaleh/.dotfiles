@@ -58,6 +58,10 @@ alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 alias ytd='youtube-dl --extract-audio --audio-format mp3 '
 
+# Set du and df to always human readable
+alias du='du -h'
+alias df='df -h'
+
 # Tmux
 alias tm='tmux'
 alias ta='tmux a'
