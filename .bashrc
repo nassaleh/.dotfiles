@@ -101,8 +101,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -229,30 +229,27 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 #Custom PS1 Shell
-#TODO show date with time instead of user@host?
 PS1=""
+#PS1="$PS1"'\[\e[1;34m\]'        # Change to Bold Blue
 PS1="$PS1"'\[\e[1;32m\]'        # Change to Bold Green
 PS1="$PS1"'\u'                  # User
-PS1="$PS1"'\[\e[1;32m\]'        # Change to Bold Green
 PS1="$PS1"'@'                   # Show @ Symbol
-PS1="$PS1"'\[\e[1;32m\]'        # Change to Bold Green
 PS1="$PS1"'\h '                 # Hostname (short)
 PS1="$PS1"'\[\e[1;32m\]'        # Change to Bold White
 PS1="$PS1"'\[\e[1;34m\]'        # Change to Bold Blue
-PS1="$PS1"'\D{%F} '             # Show Date
-PS1="$PS1"'\[\e[1;35m\]'        # Change to Bold Purple
 PS1="$PS1"'\@ '                 # Show time
-PS1="$PS1"'\[\e[1;33m\]'        # Change to Bold (brownish) yellow
+PS1="$PS1"'\[\e[1;33m\]'        # Change to Bold yellow
 PS1="$PS1"'\w'                  # Current Directory
 PS1="$PS1"'\[\e[1;36m\]'        # Change color to cyan
 PS1="$PS1"'$(__git_ps1 " (%s)")' # Git function
-PS1="$PS1"'\[\e[0m\]'           # Change color
+PS1="$PS1"'\[\e[0m\]'           # Reset text color
 PS1="$PS1"'\n'                  # New line
 PS1="$PS1"'$ '                  # Prompt: always $
 
+
 # Mount Windows Drives in WSL
 #sudo mkdir /mnt/z
-#sudo mount -t drvfs 'Z:' /mnt/z
+#sudo mount -t drvfs Z: /mnt/z
 #TODO Use this to sync, maybe make a command out of it? 'backup'? How to deal with dry run...
 #sudo rsync --exclude-from='exclude-list.txt' -avzP . /mnt/e
 

@@ -66,6 +66,7 @@ alias df='df -h'
 alias tm='tmux'
 alias ta='tmux a'
 alias tt='vim ~/.dotfiles/tmux/tmux.conf'
+alias wp='~/tmux-workspace.sh'
 
 # Random
 alias mm='mount_all_network_drives'
