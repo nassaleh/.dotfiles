@@ -1,0 +1,11 @@
+Blue keys: 0046ff
+    F keys, modifyer keys
+Number keys: ff00ff
+    number row
+Letters: ffffff
+Number pad: 00ff00
+Home, end, pgup, pgdn: 00ffff
+
+Lock: 
+    On: ff0000
+    Off: 003cff
