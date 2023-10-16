@@ -258,11 +258,10 @@ set bell-style visible
 ############### Functions ##############
 # Declare Drives dictionary and export it so it can be used in all functions
 declare -A drives=(
-    [W]="Mass_Storage"
-#    [T]="Torrents"
-    [U]="Photo"
-    [V]="Video"
-    [K]="Kamil"
+    [m]="music"
+    [p]="home"
+    [t]="data"
+    [V]="video"
 ) 
 export drives
 
